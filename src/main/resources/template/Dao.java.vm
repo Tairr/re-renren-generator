@@ -1,6 +1,6 @@
 package ${package}.${moduleName}.dao;
 
-import ${package}.${moduleName}.entity.${className}Entity;
+import ${package}.${moduleName}.domain.${className}Entity;
 import ${mainPath}.modules.sys.dao.BaseDao;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -13,5 +13,19 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface ${className}Dao extends BaseDao<${className}Entity> {
-	
+
+    ${className}Entity queryObject(${pk.attrType} ${pk.attrname});
+
+    List<${className}Entity> queryList(Map<String, Object> map);
+
+    int queryTotal(Map<String, Object> map);
+
+    void save(${className}Entity ${classname});
+
+    void update(${className}Entity ${classname});
+
+    void delete(${pk.attrType} ${pk.attrname});
+
+    void deleteBatch(${pk.attrType}[] ${pk.attrname}s);
+
 }

@@ -1,9 +1,10 @@
-package ${package}.${moduleName}.entity;
+package ${package}.${moduleName}.domain;
 
 import java.io.Serializable;
 import java.util.Date;
 #if(${hasBigDecimal})
 import java.math.BigDecimal;
+import ${package}.${moduleName}.domain.base.SerializID;
 #end
 
 
@@ -14,7 +15,7 @@ import java.math.BigDecimal;
  * @email ${email}
  * @date ${datetime}
  */
-public class ${className}Entity implements Serializable {
+public class ${className}Entity extends SerializID {
 	private static final long serialVersionUID = 1L;
 	
 #foreach ($column in $columns)

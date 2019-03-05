@@ -7,13 +7,14 @@ import java.util.List;
 import java.util.Map;
 
 import ${package}.${moduleName}.dao.${className}Dao;
-import ${package}.${moduleName}.entity.${className}Entity;
+import ${package}.${moduleName}.domain.${className}Entity;
 import ${package}.${moduleName}.service.${className}Service;
 
 
 
 @Service("${classname}Service")
 public class ${className}ServiceImpl implements ${className}Service {
+
 	@Autowired
 	private ${className}Dao ${classname}Dao;
 	
